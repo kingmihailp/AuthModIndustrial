@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+# Server-side only mod: clients without the mod can still connect
+[[mods]]
+    modId="authmodindustrial"
+    version="1.0.0"
+    displayName="AuthMod Industrial"
+    description='''
+Server-side authentication mod for Forge 1.20.1.
+Players must register/login before interacting with the world.
+Sessions are preserved for 20 minutes.
+'''
+    displayTest="IGNORE_ALL_VERSION"
+
+[[dependencies.authmodindustrial]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="SERVER"
+
+[[dependencies.authmodindustrial]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="SERVER"
