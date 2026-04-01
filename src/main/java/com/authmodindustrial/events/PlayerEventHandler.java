@@ -178,7 +178,7 @@ public final class PlayerEventHandler {
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onItemPickup(EntityItemPickupEvent event) {
-        if (!AuthManager.getInstance().isAuthenticated(event.getPlayer().getUUID())) {
+        if (!AuthManager.getInstance().isAuthenticated(event.getEntity().getUUID())) {
             event.setCanceled(true);
         }
     }
